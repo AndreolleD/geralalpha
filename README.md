@@ -1,130 +1,129 @@
-# Guia Alternativo de Redes e Git
+# 🌐 Guia Alternativo de Redes e Git
 
-## 1. Redes: visão geral
+## 🖧 1. Redes: visão geral
 
-### 1.1 Como uma rede pode ser montada
-Existem vários desenhos possíveis para conectar dispositivos. Em redes domésticas, quase sempre tudo se liga a um único roteador. Já em ambientes maiores, é comum usar múltiplos caminhos para evitar que uma falha derrube tudo.
+### 🔗 1.1 Como uma rede pode ser montada
+As redes podem ser organizadas de vários jeitos. Em casas, normalmente tudo conversa com um único roteador. Em empresas, é comum usar caminhos redundantes para evitar quedas.
 
-### 1.2 Tipos de rede por alcance
-- **PAN:** dispositivos muito próximos, como smartwatch e celular.  
-- **LAN:** redes locais, típicas de casas e escritórios.  
-- **MAN:** cobertura maior, geralmente usada por provedores de cidade.  
-- **WAN:** longas distâncias, como a comunicação entre países.
+### 📡 1.2 Tipos de rede por alcance
+- **📱 PAN:** dispositivos próximos (Bluetooth, smartwatch).  
+- **🏠 LAN:** redes domésticas ou de escritório.  
+- **🏙️ MAN:** redes que cobrem regiões urbanas.  
+- **🌍 WAN:** longas distâncias, incluindo a Internet.
 
-### 1.3 Redes internas e externas
-- **Internet:** acessível a qualquer pessoa.  
-- **Intranet:** usada internamente em empresas.  
-- **Extranet:** parecida com a intranet, mas com acessos externos controlados.
-
----
-
-## 2. Desempenho e controle de tráfego
-
-### 2.1 Latência
-A latência é o tempo que os dados levam para ir e voltar. Quanto menor, melhor para jogos, chamadas e vídeos.
-
-### 2.2 QoS (Quality of Service)
-Quando uma rede tem muito tráfego, o QoS ajuda a decidir o que é mais importante. Assim você consegue priorizar, por exemplo, a chamada de vídeo em vez de um download.
+### 🔒 1.3 Redes internas e externas
+- **🌐 Internet:** aberta ao público.  
+- **🏢 Intranet:** rede privada dentro de organizações.  
+- **🔑 Extranet:** acesso restrito para pessoas externas autorizadas.
 
 ---
 
-## 3. Protocolos essenciais
+## ⚙️ 2. Desempenho e controle de tráfego
 
-### 3.1 TCP e UDP
-- **TCP:** garante entrega, ordem dos pacotes e confiabilidade.  
-- **UDP:** não garante nada, mas é rápido e eficiente quando pequenas perdas não prejudicam (streaming, jogos, VoIP).
+### ⏱️ 2.1 Latência
+Latência é o tempo que leva para um pacote ir e voltar. Menos latência = melhor experiência em jogos, chamadas e streaming.
 
-### 3.2 HTTP e HTTPS
-- **HTTP:** comunicação sem criptografia.  
-- **HTTPS:** usa TLS para garantir que os dados não sejam lidos no caminho.
-
-### 3.3 DNS
-O DNS faz a tradução entre nomes e endereços IP. Sem ele, precisaríamos decorar números como `142.250.78.14` em vez de `google.com`.
+### 🎚️ 2.2 QoS (Quality of Service)
+QoS permite definir prioridades. Assim, chamadas de vídeo e VoIP não travam quando a rede está ocupada.
 
 ---
 
-## 4. Wi-Fi e segurança wireless
+## 📡 3. Protocolos essenciais
 
-### 4.1 Padrões de segurança
-- **WEP:** ultrapassado e vulnerável.  
-- **WPA / WPA2:** padrões modernos e mais seguros.  
-- **WPA3:** versão atual com melhorias de criptografia.
+### 🔁 3.1 TCP x UDP
+- **📦 TCP:** garante entrega e ordem dos dados.  
+- **🚀 UDP:** mais rápido e leve, sem garantias.
 
----
+### 🔐 3.2 HTTP x HTTPS
+- **HTTP:** dados enviados sem proteção.  
+- **HTTPS:** usa TLS para criptografar.
 
-## 5. Endereços IP
-
-### 5.1 IPv4
-Usa números separados por pontos (ex.: 192.168.0.1). Como o estoque de endereços acabou, se usa muito NAT para reaproveitar IPs.
-
-### 5.2 IPv6
-Tem muito mais espaço de endereços, dispensa NAT e já inclui recursos modernos de segurança.
+### 🌍 3.3 DNS
+Sistema que traduz nomes como `google.com` em endereços IP. Sem o DNS, seria necessário memorizar números.
 
 ---
 
-## 6. Segurança da informação
+## 📶 4. Wi-Fi e segurança wireless
 
-### 6.1 Criptografia
-- **Simétrica:** mesma chave para cifrar e decifrar.  
-- **Assimétrica:** usa par de chaves (pública e privada).
+### 🛡️ 4.1 Padrões de segurança
+- **❌ WEP:** inseguro.  
+- **✔️ WPA / WPA2:** seguros e usados amplamente.  
+- **🔒 WPA3:** padrão mais recente, recomendado.
 
-### 6.2 TLS e certificados
-O TLS garante que a conexão entre cliente e servidor seja protegida. A autenticação é feita por certificados emitidos por autoridades confiáveis.
+---
 
-### 6.3 Ataques comuns
+## 🧩 5. Endereços IP
+
+### 🔢 5.1 IPv4
+Formato tradicional (ex.: `192.168.0.1`). Como o número de endereços acabou, o NAT virou padrão em redes domésticas.
+
+### 🆕 5.2 IPv6
+Mais moderno, muito mais espaço de endereços e melhorias em segurança.
+
+---
+
+## 🛡️ 6. Segurança da informação
+
+### 🔑 6.1 Criptografia
+- **⚡ Simétrica:** mesma chave para tudo.  
+- **🔐 Assimétrica:** par de chaves (pública/privada).
+
+### 🧾 6.2 TLS e certificados
+O TLS mantém a conexão segura e usa certificados digitais para validar servidores.
+
+### ⚠️ 6.3 Ameaças comuns
 - DDoS  
 - Malware  
 - Engenharia social  
-- Exploração de falhas  
-Boas práticas incluem firewalls, IDS/IPS, atualizações e conscientização de usuários.
+- Exploração de vulnerabilidades  
+Boas práticas incluem firewalls, IDS/IPS, atualizações e treinamento.
 
 ---
 
-## 7. Tecnologias modernas em rede
-- **Cloud:** infraestrutura elástica e distribuída.  
-- **CDN:** entrega conteúdo de forma rápida usando servidores mais próximos do usuário.  
-- **VPN:** cria túneis seguros sobre redes abertas.  
-- **IoT:** dispositivos simples que exigem protocolos leves e cuidados extras de segurança.
+## 🚀 7. Tecnologias modernas
+
+- **☁️ Cloud:** infraestrutura flexível e escalável.  
+- **🌎 CDN:** servidores distribuídos para entregar conteúdo mais rápido.  
+- **🛣️ VPN:** túnel seguro mesmo em redes públicas.  
+- **📟 IoT:** dispositivos simples que exigem protocolos leves e segurança reforçada.
 
 ---
 
-# Parte 2 — Git e Controle de Versão
+# 🧰 Git e Controle de Versão
 
-## 8. Fundamentos do Git
+## 📁 8. Fundamentos do Git
 
-### 8.1 Estrutura interna
-O Git usa três áreas:
-- **Working Directory:** onde você altera arquivos.  
-- **Staging Area:** fila do que vai entrar no próximo commit.  
-- **Repository (.git):** histórico e metadados.
+### 📂 8.1 Áreas internas
+- **📝 Working Directory:** onde você edita.  
+- **📤 Staging Area:** preparação para commit.  
+- **📦 .git:** armazenamento do histórico.
 
-### 8.2 Commits e hashes
-Cada commit gera um hash único baseado no conteúdo e nas informações do commit. Mudar qualquer detalhe gera outro hash.
-
----
-
-## 9. Branches
-
-### 9.1 O que é uma branch
-Uma branch é basicamente um ponteiro que aponta para o último commit daquela linha de trabalho.
-
-### 9.2 Movimentação do ponteiro
-Sempre que você cria um novo commit, a branch avança para esse commit automaticamente.
+### 🧱 8.2 Commits e hashes
+Cada commit é identificado por um hash único criado a partir do conteúdo e metadados.
 
 ---
 
-## 10. Merge e resolução de conflitos
+## 🌿 9. Branches
 
-### 10.1 Tipos de merge
-- **Fast-forward:** quando a branch de destino pode simplesmente avançar sem criar commit extra.  
-- **Merge com commit:** criado quando há divergência entre históricos.
+### 🍃 9.1 O que é uma branch
+Uma branch é só um ponteiro que aponta para o último commit daquela linha.
 
-### 10.2 Conflitos
-Quando duas mudanças afetam a mesma parte do arquivo, o Git pede que você resolva manualmente.
+### 🔄 9.2 Como ela avança
+Ao criar um novo commit, a branch automaticamente aponta para ele.
 
 ---
 
-## 11. Remotos e colaboração
+## 🔀 10. Merge e conflitos
 
-### 11.1 Repositórios remotos
-Você conecta seu projeto a um servidor externo com:
+### ⚡ 10.1 Tipos de merge
+- **➡️ Fast-forward:** avança sem criar commit extra.  
+- **🔧 Merge normal:** cria um commit de união.
+
+### ❗ 10.2 Conflitos
+Quando duas alterações mexem na mesma parte do arquivo, o Git exige que você resolva manualmente.
+
+---
+
+## 🌍 11. Remotos e colaboração
+
+### 🔗 11.1 Adicionando remote
